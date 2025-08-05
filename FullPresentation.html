@@ -1122,84 +1122,62 @@
 &lt;/body&gt;
 &lt;/html&gt;
 '></iframe>
-&lt;!DOCTYPE html&gt;
-<iframe title="Availability and Listing" srcdoc='&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+
+<iframe title="Top Search Keywords" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;Availability and Listing&lt;/title&gt;
-&lt;meta name="viewport" content="width=1280, initial-scale=1.0" /&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;title&gt;Top Search Keywords&lt;/title&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=1280, initial-scale=1.0&quot; /&gt;
 &lt;style&gt;
-  body {margin:0;padding:0;font-family:"Inter", sans-serif;background:#ffffff;width:1280px;height:720px;}
-  .top-accent{height:7px;background:#007ABC;width:100%;}
+  body {margin:0;padding:0;font-family:&quot;Inter&quot;, sans-serif;background:#ffffff;width:1280px;height:720px;}
+  .top-accent{height:7px;background-color:#007ABC;width:100%;}
   .header-bar{height:86px;display:flex;justify-content:space-between;align-items:center;padding:0 40px;border-bottom:1px solid #f3f4f6;}
-  .slide-title{font-family:"Archivo", sans-serif;font-size:32px;font-weight:700;color:#171a1f;}
+  .slide-title{font-family:&quot;Archivo&quot;, sans-serif;font-size:32px;font-weight:700;color:#171a1f;}
   .logo{height:43px;}
-  .main{display:flex;gap:20px;padding:30px 40px;}
-  .platform{flex:1;}
-  .section-title{font-family:"Archivo", sans-serif;font-size:20px;font-weight:600;margin-bottom:10px;}
-  .legend{display:flex;gap:12px;margin-bottom:10px;font-size:14px;}
-  .legend-item{display:flex;align-items:center;}
-  .dot{width:12px;height:12px;border-radius:50%;margin-right:4px;}
-  .dot-blinkit-listing{background-color:#FFDE21;}
-  .dot-blinkit-availability{background-color:#FFC107;}
-  .dot-swiggy-listing{background-color:#FC8019;}
-  .dot-swiggy-availability{background-color:#D65A00;}
-  .dot-zepto-listing{background-color:#370F6E;}
-  .dot-zepto-availability{background-color:#7B3FA0;}
-  .chart-container{border:1px dashed #9095a0;height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .wordcloud-row{display:flex;gap:20px;padding:30px 40px;}
+  .wordcloud{flex:1;border:1px dashed #9095a0;padding:20px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:4px;}
+  .wordcloud h3{width:100%;margin:0 0 10px 0;font-family:&quot;Archivo&quot;, sans-serif;font-size:20px;}
+  .wordcloud span{display:inline-block;margin:2px;}
+  .bar-chart{margin:0 40px;height:200px;border:1px dashed #9095a0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .bar-chart h3{font-family:&quot;Archivo&quot;, sans-serif;font-size:20px;margin-bottom:10px;}
   .chart-placeholder{flex:1;display:flex;align-items:center;justify-content:center;font-size:14px;color:#9095a0;}
-  .insights{padding:0 40px;}
-  .insights h3{font-family:"Archivo", sans-serif;font-size:20px;font-weight:600;margin-bottom:10px;}
-  .insights ul{padding-left:20px;font-size:15px;}
+  .insight-box{border:1px solid #dee1e6;margin:20px 40px;padding:20px;}
+  .insight-box h3{font-family:&quot;Archivo&quot;, sans-serif;font-size:20px;margin:0 0 10px 0;}
+  .insight-box ul{padding-left:20px;font-size:15px;margin:0;}
 &lt;/style&gt;
 &lt;/head&gt;
-&lt;body&gt;
-&lt;div class="top-accent"&gt;&lt;/div&gt;
-<div class="header-bar"><div class="slide-title">Availability and Listing</div><img src="1DS-Logo-1.png" alt="1DS Logo" class="logo"/></div>
-<div class="main">
-  <div class="platform blinkit">
-    <div class="section-title">Blinkit Availability & Listing</div>
-    <div class="chart-container" data-block-type="availability_listing_chart" data-chart-type="clustered-horizontal-bar">
-      <div class="legend">
-        <span class="legend-item"><span class="dot dot-blinkit-listing"></span>Listing Coverage</span>
-        <span class="legend-item"><span class="dot dot-blinkit-availability"></span>Avg. Availability</span>
-      </div>
-      <div class="chart-placeholder">[CLUSTERED BAR CHART PLACEHOLDER]</div>
-    </div>
-  </div>
-  <div class="platform swiggy">
-    <div class="section-title">Swiggy Availability & Listing</div>
-    <div class="chart-container" data-block-type="availability_listing_chart" data-chart-type="clustered-horizontal-bar">
-      <div class="legend">
-        <span class="legend-item"><span class="dot dot-swiggy-listing"></span>Listing Coverage</span>
-        <span class="legend-item"><span class="dot dot-swiggy-availability"></span>Avg. Availability</span>
-      </div>
-      <div class="chart-placeholder">[CLUSTERED BAR CHART PLACEHOLDER]</div>
-    </div>
-  </div>
-  <div class="platform zepto">
-    <div class="section-title">Zepto Availability & Listing</div>
-    <div class="chart-container" data-block-type="availability_listing_chart" data-chart-type="clustered-horizontal-bar">
-      <div class="legend">
-        <span class="legend-item"><span class="dot dot-zepto-listing"></span>Listing Coverage</span>
-        <span class="legend-item"><span class="dot dot-zepto-availability"></span>Avg. Availability</span>
-      </div>
-      <div class="chart-placeholder">[CLUSTERED BAR CHART PLACEHOLDER]</div>
-    </div>
-  </div>
-</div>
-<div class="insights" data-block-type="insight_bullets">
-<h3>Key Takeaways</h3>
-<ul>
-<li>&lt;Insight 1&gt;</li>
-<li>&lt;Insight 2&gt;</li>
-<li>&lt;Insight 3&gt;</li>
-</ul>
-</div>
+&lt;body data-slide-type=&quot;top_search_keywords&quot;&gt;
+&lt;div class=&quot;top-accent&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;header-bar&quot;&gt;&lt;div class=&quot;slide-title&quot;&gt;Top Search Keywords&lt;/div&gt;&lt;img src=&quot;1DS-Logo-1.png&quot; alt=&quot;1DS Logo&quot; class=&quot;logo&quot;/&gt;&lt;/div&gt;
+&lt;div class=&quot;wordcloud-row&quot;&gt;
+  &lt;div class=&quot;wordcloud wordcloud-branded&quot;&gt;
+    &lt;h3&gt;Branded (12%)&lt;/h3&gt;
+    &lt;span style=&quot;font-size:24px;&quot;&gt;Whey Protein&lt;/span&gt;
+    &lt;span style=&quot;font-size:18px;&quot;&gt;Brand Name&lt;/span&gt;
+    &lt;span style=&quot;font-size:14px;&quot;&gt;Supplement&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;wordcloud wordcloud-generic&quot;&gt;
+    &lt;h3&gt;Generic (88%)&lt;/h3&gt;
+    &lt;span style=&quot;font-size:24px;&quot;&gt;Protein Powder&lt;/span&gt;
+    &lt;span style=&quot;font-size:18px;&quot;&gt;Energy Drink&lt;/span&gt;
+    &lt;span style=&quot;font-size:14px;&quot;&gt;Healthy Snack&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;bar-chart&quot; data-block-type=&quot;branded_search_share_chart&quot; data-chart-type=&quot;bar&quot;&gt;
+  &lt;h3&gt;Branded Search Share&lt;/h3&gt;
+  &lt;div class=&quot;chart-placeholder&quot;&gt;[Bar Chart]&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;insight-box&quot;&gt;
+  &lt;h3&gt;Key Insights&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&amp;lt;Insight 1&amp;gt;&lt;/li&gt;
+    &lt;li&gt;&amp;lt;Insight 2&amp;gt;&lt;/li&gt;
+    &lt;li&gt;&amp;lt;Insight 3&amp;gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-'></iframe>
+&lt;/html&gt;'></iframe>
 <iframe title="SOV Analysis" srcdoc='&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -1212,8 +1190,8 @@
   .header-bar{ height:86px; display:flex; justify-content:space-between; align-items:center; padding:0 40px; border-bottom:1px solid #f3f4f6; }
   .slide-title{ font-family:&quot;Archivo&quot;, sans-serif; font-size:32px; font-weight:700; color:#171a1f; }
   .logo{ height:43px; }
-  .grid{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:20px; padding:30px 40px; }
-  .chart-container{ border:1px dashed #9095a0; height:260px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .charts-row{ display:flex; gap:20px; padding:30px 40px; }
+  .chart-container{ border:1px dashed #9095a0; flex:1; height:360px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
   .legend{ margin-bottom:10px; font-size:14px; }
   .legend span{ margin-right:12px; }
   .dot{ width:12px; height:12px; border-radius:50%; display:inline-block; margin-right:4px; }
@@ -1221,30 +1199,16 @@
   .swiggy{ background:#FC8019; }
   .zepto{ background:#370F6E; }
   .chart-placeholder{ flex:1; display:flex; align-items:center; justify-content:center; font-size:14px; color:#9095a0; }
-  .insights{ border:1px solid #dee1e6; padding:20px; }
-  .insights h3{ font-family:&quot;Archivo&quot;, sans-serif; font-size:20px; margin:0 0 10px 0; }
-  .insights h4{ font-family:&quot;Inter&quot;, sans-serif; font-size:16px; margin:0 0 8px 0; }
-  .insights ul{ padding-left:16px; font-size:15px; }
+  .key-insights-box{ border:1px solid #dee1e6; margin:0 40px 30px; padding:20px; }
+  .key-insights-box h3{ font-family:&quot;Archivo&quot;, sans-serif; font-size:20px; margin:0 0 10px 0; }
+  .key-insights-box h4{ font-family:&quot;Inter&quot;, sans-serif; font-size:16px; margin:0 0 8px 0; }
+  .key-insights-box ul{ padding-left:16px; font-size:15px; margin:0; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body data-slide-type=&quot;sov_analysis&quot;&gt;
 &lt;div class=&quot;top-accent&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;header-bar&quot;&gt;&lt;div class=&quot;slide-title&quot;&gt;SOV Analysis&lt;/div&gt;&lt;img src=&quot;1DS-Logo-1.png&quot; alt=&quot;1DS Logo&quot; class=&quot;logo&quot; /&gt;&lt;/div&gt;
-&lt;div class=&quot;grid&quot;&gt;
-  &lt;div class=&quot;chart-container&quot; data-block-type=&quot;sov_chart&quot; data-chart-type=&quot;column-clustered&quot;&gt;
-    &lt;h3&gt;Overall SOV by Platform&lt;/h3&gt;
-    &lt;div class=&quot;legend&quot;&gt;&lt;span&gt;&lt;span class=&quot;dot blinkit&quot;&gt;&lt;/span&gt;Blinkit&lt;/span&gt;&lt;span&gt;&lt;span class=&quot;dot swiggy&quot;&gt;&lt;/span&gt;Swiggy&lt;/span&gt;&lt;span&gt;&lt;span class=&quot;dot zepto&quot;&gt;&lt;/span&gt;Zepto&lt;/span&gt;&lt;/div&gt;
-    &lt;div class=&quot;chart-placeholder&quot;&gt;[Overall SOV Chart]&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;insights&quot; data-block-type=&quot;sov_insights&quot;&gt;
-    &lt;h3&gt;Key SOV Insights&lt;/h3&gt;
-    &lt;h4&gt;Coolberg SOV Strengths&lt;/h4&gt;
-    &lt;ul&gt;
-      &lt;li data-insight-index=&quot;1&quot;&gt;&amp;lt;Insight 1&amp;gt;&lt;/li&gt;
-      &lt;li data-insight-index=&quot;2&quot;&gt;&amp;lt;Insight 2&amp;gt;&lt;/li&gt;
-      &lt;li data-insight-index=&quot;3&quot;&gt;&amp;lt;Insight 3&amp;gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
+&lt;div class=&quot;charts-row&quot;&gt;
   &lt;div class=&quot;chart-container&quot; data-block-type=&quot;sov_chart&quot; data-chart-type=&quot;column-clustered&quot;&gt;
     &lt;h3&gt;Organic SOV by Platform&lt;/h3&gt;
     &lt;div class=&quot;legend&quot;&gt;&lt;span&gt;&lt;span class=&quot;dot blinkit&quot;&gt;&lt;/span&gt;Blinkit&lt;/span&gt;&lt;span&gt;&lt;span class=&quot;dot swiggy&quot;&gt;&lt;/span&gt;Swiggy&lt;/span&gt;&lt;span&gt;&lt;span class=&quot;dot zepto&quot;&gt;&lt;/span&gt;Zepto&lt;/span&gt;&lt;/div&gt;
@@ -1256,6 +1220,168 @@
     &lt;div class=&quot;chart-placeholder&quot;&gt;[Paid SOV Chart]&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;key-insights-box&quot; data-block-type=&quot;sov_insights&quot;&gt;
+  &lt;h3&gt;Key SOV Insights&lt;/h3&gt;
+  &lt;h4&gt;Coolberg SOV Strengths&lt;/h4&gt;
+  &lt;ul&gt;
+    &lt;li data-insight-index=&quot;1&quot;&gt;&amp;lt;Insight 1&amp;gt;&lt;/li&gt;
+    &lt;li data-insight-index=&quot;2&quot;&gt;&amp;lt;Insight 2&amp;gt;&lt;/li&gt;
+    &lt;li data-insight-index=&quot;3&quot;&gt;&amp;lt;Insight 3&amp;gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-'></iframe>
+&lt;/html&gt;'></iframe>
+<iframe title="Paid Visibility – Top brands across regions" srcdoc='&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;title&gt;Paid Visibility – Top brands across regions&lt;/title&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=1280, initial-scale=1.0&quot; /&gt;
+&lt;style&gt;
+  body {margin:0;padding:0;font-family:&quot;Inter&quot;, sans-serif;background:#ffffff;width:1280px;height:720px;}
+  .top-accent{height:7px;background-color:#007ABC;width:100%;}
+  .header-bar{height:86px;display:flex;justify-content:space-between;align-items:center;padding:0 40px;border-bottom:1px solid #f3f4f6;}
+  .slide-title{font-family:&quot;Archivo&quot;, sans-serif;font-size:32px;font-weight:700;color:#171a1f;}
+  .logo{height:43px;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,auto);gap:20px;padding:30px 40px;}
+  .region-block{border:1px solid #f3f4f6;padding:10px;}
+  .region-title{font-family:&quot;Archivo&quot;, sans-serif;font-size:20px;font-weight:700;margin-bottom:8px;}
+  .platforms{display:flex;gap:10px;}
+  .platform-block{flex:1;}
+  .platform-title{font-family:&quot;Archivo&quot;, sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;}
+  table{width:100%;font-size:14px;border-collapse:collapse;}
+  td{padding:4px;}
+  .progress-bar{height:6px;background:#dee1e6;width:100%;}
+  .progress-bar .fill{height:100%;}
+  table.blinkit .fill{background:#FFDE21;}
+  table.swiggy .fill{background:#FC8019;}
+  table.zepto .fill{background:#370F6E;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body data-slide-type=&quot;paid_visibility_top_brands&quot;&gt;
+&lt;div class=&quot;top-accent&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;header-bar&quot;&gt;&lt;div class=&quot;slide-title&quot;&gt;Paid Visibility – Top brands across regions&lt;/div&gt;&lt;img src=&quot;1DS-Logo-1.png&quot; alt=&quot;1DS Logo&quot; class=&quot;logo&quot; /&gt;&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+  &lt;div class=&quot;region-block&quot; data-region=&quot;Delhi-NCR&quot; data-block-type=&quot;region_paid_visibility_tables&quot;&gt;
+    &lt;div class=&quot;region-title&quot;&gt;Delhi NCR Region&lt;/div&gt;
+    &lt;div class=&quot;platforms&quot;&gt;
+      &lt;table class=&quot;blinkit&quot; data-platform=&quot;Blinkit&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;swiggy&quot; data-platform=&quot;Swiggy&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;zepto&quot; data-platform=&quot;Zepto&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;region-block&quot; data-region=&quot;Mumbai&quot; data-block-type=&quot;region_paid_visibility_tables&quot;&gt;
+    &lt;div class=&quot;region-title&quot;&gt;Mumbai Region&lt;/div&gt;
+    &lt;div class=&quot;platforms&quot;&gt;
+      &lt;table class=&quot;blinkit&quot; data-platform=&quot;Blinkit&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;swiggy&quot; data-platform=&quot;Swiggy&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;zepto&quot; data-platform=&quot;Zepto&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;region-block&quot; data-region=&quot;Bengaluru&quot; data-block-type=&quot;region_paid_visibility_tables&quot;&gt;
+    &lt;div class=&quot;region-title&quot;&gt;Bengaluru Region&lt;/div&gt;
+    &lt;div class=&quot;platforms&quot;&gt;
+      &lt;table class=&quot;blinkit&quot; data-platform=&quot;Blinkit&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;swiggy&quot; data-platform=&quot;Swiggy&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;zepto&quot; data-platform=&quot;Zepto&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;region-block&quot; data-region=&quot;Hyderabad&quot; data-block-type=&quot;region_paid_visibility_tables&quot;&gt;
+    &lt;div class=&quot;region-title&quot;&gt;Hyderabad Region&lt;/div&gt;
+    &lt;div class=&quot;platforms&quot;&gt;
+      &lt;table class=&quot;blinkit&quot; data-platform=&quot;Blinkit&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;swiggy&quot; data-platform=&quot;Swiggy&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;zepto&quot; data-platform=&quot;Zepto&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;region-block&quot; data-region=&quot;Chennai&quot; data-block-type=&quot;region_paid_visibility_tables&quot;&gt;
+    &lt;div class=&quot;region-title&quot;&gt;Chennai Region&lt;/div&gt;
+    &lt;div class=&quot;platforms&quot;&gt;
+      &lt;table class=&quot;blinkit&quot; data-platform=&quot;Blinkit&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;swiggy&quot; data-platform=&quot;Swiggy&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;zepto&quot; data-platform=&quot;Zepto&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;region-block&quot; data-region=&quot;Kolkata&quot; data-block-type=&quot;region_paid_visibility_tables&quot;&gt;
+    &lt;div class=&quot;region-title&quot;&gt;Kolkata Region&lt;/div&gt;
+    &lt;div class=&quot;platforms&quot;&gt;
+      &lt;table class=&quot;blinkit&quot; data-platform=&quot;Blinkit&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;swiggy&quot; data-platform=&quot;Swiggy&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;table class=&quot;zepto&quot; data-platform=&quot;Zepto&quot; data-chart-type=&quot;progress_table&quot;&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 1&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 1&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 1&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 2&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 2&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 2&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td data-metric=&quot;brand_name&quot;&gt;&amp;lt;Brand 3&amp;gt;&lt;/td&gt;&lt;td data-metric=&quot;paid_sov&quot;&gt;&amp;lt;Share 3&amp;gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;progress-bar&quot;&gt;&lt;div class=&quot;fill&quot; style=&quot;width:&amp;lt;Share 3&amp;gt;%&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;'></iframe>
