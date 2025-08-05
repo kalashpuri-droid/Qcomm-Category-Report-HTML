@@ -829,133 +829,58 @@
 </html>'></iframe>
 <iframe title="Pack Size Analysis" srcdoc='<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pack Size Analysis</title>
-    <meta name="viewport" content="width=1280, initial-scale=1.0" />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-        background-color: #ffffff;
-        width: 1280px;
-        height: 720px;
-        position: relative;
-      }
-
-      .top-accent {
-        height: 7px;
-        background-color: #007abc;
-        width: 100%;
-      }
-
-      .header-bar {
-        height: 86px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 40px;
-        border-bottom: 1px solid #f3f4f6;
-      }
-
-      .slide-title {
-        font-family: "Archivo", sans-serif;
-        font-size: 32px;
-        font-weight: 700;
-        color: #171a1f;
-      }
-
-      .logo {
-        height: 43px;
-      }
-
-      .section {
-        padding: 30px 40px;
-      }
-
-      .section-title {
-        font-size: 20px;
-        font-weight: 600;
-        font-family: "Archivo", sans-serif;
-        margin-bottom: 10px;
-      }
-      .legend {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      .legend-item {
-        display: flex;
-        align-items: center;
-      }
-      .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin-right: 6px;
-      }
-      .dot.blinkit { background-color: #FFDE21; }
-      .dot.swiggy { background-color: #FC8019; }
-      .dot.zepto { background-color: #370F6E; }
-      .chart-container {
-        border: 1px dashed #9095a0;
-        height: 260px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      .chart-placeholder {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        color: #9095a0;
-      }
-
-      .insights ul {
-        padding-left: 20px;
-        font-size: 15px;
-        line-height: 1.5;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px 40px;
-      }
-      .insights li {
-        width: 45%;
-      }
-
-      .insights ul {
-        padding-left: 20px;
-        font-size: 15px;
-        line-height: 1.5;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px 40px;
-      }
-      .insights li {
-        width: 45%;
-      }
-    </style>
-  </head>
-  <body data-slide-type="pack_size_analysis">
-    <div class="top-accent"></div>
-    <div class="header-bar">
-      <div class="slide-title">Pack Size Analysis</div>
-      <img src="1DS-Logo-1.png" alt="1DS Logo" class="logo" />
-    </div>
-    <div class="section">
-      <div class="section-title">Pack Size Distribution by Platform</div>
-      <div class="chart-container" data-block-type="pack_size_distribution_chart" data-chart-type="bar-grouped">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pack Size Analysis</title>
+  <meta name="viewport" content="width=1280, initial-scale=1.0" />
+  <style>
+    body { margin:0; padding:0; font-family:"Inter", sans-serif; background:#ffffff; width:1280px; height:720px; }
+    .top-accent{ height:7px; background-color:#007ABC; width:100%; }
+    .header-bar{ height:86px; display:flex; justify-content:space-between; align-items:center; padding:0 40px; border-bottom:1px solid #f3f4f6; }
+    .slide-title{ font-family:"Archivo", sans-serif; font-size:32px; font-weight:700; color:#171a1f; }
+    .logo{ height:43px; }
+    .content{ display:flex; padding:30px 40px; gap:40px; }
+    .left{ flex:1; }
+      .section-title{ font-family:"Archivo", sans-serif; font-size:20px; font-weight:600; margin-bottom:8px; }
+      .legend{ margin-bottom:10px; font-size:14px; display:flex; gap:12px; }
+      .legend-item{ display:flex; align-items:center; }
+      .dot{ width:12px; height:12px; border-radius:50%; margin-right:4px; }
+      .blinkit{ background-color:#FFDE21; }
+      .swiggy{ background-color:#FC8019; }
+      .zepto{ background-color:#370F6E; }
+      .chart-container{ border:1px dashed #9095a0; height:260px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+      .chart-placeholder{ flex:1; display:flex; align-items:center; justify-content:center; font-size:14px; color:#9095a0; }
+    .insights h3{ font-size:18px; font-family:"Archivo", sans-serif; margin-bottom:8px; }
+    .insights ul{ padding-left:16px; font-size:15px; line-height:1.4; }
+    .right{ width:520px; display:flex; flex-direction:column; gap:20px; }
+    .segment{ border:1px solid #f3f4f6; padding:10px; }
+    .segment-title{ font-family:"Archivo", sans-serif; font-size:18px; font-weight:700; margin-bottom:8px; }
+    .platform-tables{ display:flex; gap:10px; }
+    table{ width:100%; font-size:14px; border-collapse:collapse; }
+    td{ padding:4px; }
+    .progress-bar{ height:6px; background:#dee1e6; width:100%; }
+    .progress-bar .fill{ height:100%; }
+    table.blinkit .fill{ background:#FFDE21; }
+    table.swiggy .fill{ background:#FC8019; }
+    table.zepto .fill{ background:#370F6E; }
+  </style>
+</head>
+<body data-slide-type="pack_size_analysis">
+  <div class="top-accent"></div>
+  <div class="header-bar">
+    <div class="slide-title">Pack Size Analysis</div>
+    <img src="1DS-Logo-1.png" alt="1DS Logo" class="logo" />
+  </div>
+  <div class="content">
+    <div class="left">
+      <div class="section-title">Pack Size Distribution</div>
+      <div class="chart-container" data-block-type="pack_size_distribution_chart" data-chart-type="clustered-horizontal-bar">
         <div class="legend">
           <span class="legend-item"><span class="dot blinkit"></span>Blinkit</span>
           <span class="legend-item"><span class="dot swiggy"></span>Swiggy</span>
           <span class="legend-item"><span class="dot zepto"></span>Zepto</span>
         </div>
-        <div class="chart-placeholder">[BAR CHART PLACEHOLDER]</div>
+        <div class="chart-placeholder">[CLUSTERED BAR CHART PLACEHOLDER]</div>
       </div>
       <div class="insights" data-block-type="pack_size_insights">
         <h3>Key Pack Size Insights</h3>
@@ -963,127 +888,91 @@
           <li data-insight-index="1">&lt;Insight 1&gt;</li>
           <li data-insight-index="2">&lt;Insight 2&gt;</li>
           <li data-insight-index="3">&lt;Insight 3&gt;</li>
-          <li data-insight-index="4">&lt;Insight 4&gt;</li>
         </ul>
       </div>
     </div>
-  </body>
-</html>'></iframe>
-<iframe title="Top Brands by Pack Size" srcdoc='<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Top Brands by Pack Size</title>
-    <meta name="viewport" content="width=1280, initial-scale=1.0" />
-    <style>
-      body {margin:0;padding:0;font-family:"Inter", sans-serif;background:#ffffff;width:1280px;height:720px;}
-      .top-accent{height:7px;background-color:#007ABC;width:100%;}
-      .header-bar{height:86px;display:flex;justify-content:space-between;align-items:center;padding:0 40px;border-bottom:1px solid #f3f4f6;}
-      .slide-title{font-family:"Archivo", sans-serif;font-size:32px;font-weight:700;color:#171a1f;}
-      .logo{height:43px;}
-      .slide-container{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,auto);gap:20px;padding:30px 40px;}
-      .packsize-block{border:1px solid #f3f4f6;padding:10px;}
-      .packsize-title{font-family:"Archivo", sans-serif;font-size:18px;font-weight:700;margin-bottom:6px;}
-      .platform-title{font-family:"Archivo", sans-serif;font-size:16px;font-weight:600;margin-bottom:4px;}
-      table{width:100%;font-size:14px;border-collapse:collapse;}
-      td{padding:4px;}
-      .progress-bar{height:6px;background:#dee1e6;width:100%;}
-      .progress-bar .fill{height:100%;}
-      table.blinkit .fill{background:#FFDE21;}
-      table.swiggy .fill{background:#FC8019;}
-      table.zepto .fill{background:#370F6E;}
-    </style>
-  </head>
-  <body data-slide-type="top_brands_by_pack_size">
-    <div class="top-accent"></div>
-    <div class="header-bar">
-      <div class="slide-title">Top Brands by Pack Size</div>
-      <img src="1DS-Logo-1.png" alt="1DS Logo" class="logo" />
-    </div>
-    <div class="slide-container">
-      <div class="packsize-block" data-pack="lt100" data-platform="Blinkit">
-        <div class="packsize-title">&lt;100g - Top Brands</div>
-        <div class="platform-title">Blinkit</div>
-        <table class="blinkit" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
+    <div class="right" data-block-type="pack_size_segment_tables">
+      <div class="segment" data-segment="lt120">
+        <div class="segment-title">&lt; 120g</div>
+        <div class="platform-tables">
+          <table class="blinkit" data-platform="Blinkit" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+          <table class="swiggy" data-platform="Swiggy" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+          <table class="zepto" data-platform="Zepto" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="packsize-block" data-pack="lt100" data-platform="Swiggy">
-        <div class="packsize-title">&lt;100g - Top Brands</div>
-        <div class="platform-title">Swiggy</div>
-        <table class="swiggy" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
+      <div class="segment" data-segment="120-250">
+        <div class="segment-title">120–250g</div>
+        <div class="platform-tables">
+          <table class="blinkit" data-platform="Blinkit" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+          <table class="swiggy" data-platform="Swiggy" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+          <table class="zepto" data-platform="Zepto" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="packsize-block" data-pack="lt100" data-platform="Zepto">
-        <div class="packsize-title">&lt;100g - Top Brands</div>
-        <div class="platform-title">Zepto</div>
-        <table class="zepto" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
-      </div>
-      <div class="packsize-block" data-pack="100-250" data-platform="Blinkit">
-        <div class="packsize-title">100g–250g - Top Brands</div>
-        <div class="platform-title">Blinkit</div>
-        <table class="blinkit" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
-      </div>
-      <div class="packsize-block" data-pack="100-250" data-platform="Swiggy">
-        <div class="packsize-title">100g–250g - Top Brands</div>
-        <div class="platform-title">Swiggy</div>
-        <table class="swiggy" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
-      </div>
-      <div class="packsize-block" data-pack="100-250" data-platform="Zepto">
-        <div class="packsize-title">100g–250g - Top Brands</div>
-        <div class="platform-title">Zepto</div>
-        <table class="zepto" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
-      </div>
-      <div class="packsize-block" data-pack="gt250" data-platform="Blinkit">
-        <div class="packsize-title">&gt;250g - Top Brands</div>
-        <div class="platform-title">Blinkit</div>
-        <table class="blinkit" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
-      </div>
-      <div class="packsize-block" data-pack="gt250" data-platform="Swiggy">
-        <div class="packsize-title">&gt;250g - Top Brands</div>
-        <div class="platform-title">Swiggy</div>
-        <table class="swiggy" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
-      </div>
-      <div class="packsize-block" data-pack="gt250" data-platform="Zepto">
-        <div class="packsize-title">&gt;250g - Top Brands</div>
-        <div class="platform-title">Zepto</div>
-        <table class="zepto" data-chart-type="progress_table">
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 1&gt;</td><td data-metric="market_share">&lt;Share 1&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 2&gt;</td><td data-metric="market_share">&lt;Share 2&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 2&gt;%"></div></div></td></tr>
-          <tr class="brand-row"><td class="brand-name" data-metric="brand_name">&lt;Brand 3&gt;</td><td data-metric="market_share">&lt;Share 3&gt;</td><td><div class="progress-bar"><div class="fill" style="width:&lt;Share 3&gt;%"></div></div></td></tr>
-        </table>
+      <div class="segment" data-segment="gt250">
+        <div class="segment-title">&gt; 250g</div>
+        <div class="platform-tables">
+          <table class="blinkit" data-platform="Blinkit" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+          <table class="swiggy" data-platform="Swiggy" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+          <table class="zepto" data-platform="Zepto" data-chart-type="progress_table">
+            <tr>
+              <td data-metric="brand_name">&lt;Brand 1&gt;</td>
+              <td data-metric="market_share">&lt;Share 1&gt;</td>
+              <td><div class="progress-bar"><div class="fill" style="width:&lt;Share 1&gt;%;"></div></div></td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>'></iframe>
 <iframe title="Price Band Segmentation" srcdoc='&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
